@@ -1,0 +1,37 @@
+NAME
+    Date::Holidays::No - A wrapper for No::Dato to comply with Date:Holidays
+
+SYNOPSIS
+    use Date::Holidays;
+
+    my $dh = Date::Holidays->new( countrycode => 'no' );
+
+    $dh->is_holiday( year => 2004, month => 12, day => 25); $dh->holidays(
+    year => 2004 );
+
+DESCRIPTION
+    This is just a wrapper around No::Dato to comply with the Date::Holidays
+    factory class. See Date::Holidays for usage information, and No::Dato
+    for implementation details.
+
+BUGS
+    Please report issues via CPAN RT:
+
+      http://rt.cpan.org/NoAuth/Bugs.html?Dist=Date-Holidays-No
+
+    or by sending mail to
+
+      bug-Date-Holidays-No@rt.cpan.org
+
+AUTHOR
+    Marcus Ramberg, (mramberg) - <mramberg@cpan.org>
+
+COPYRIGHT
+    Date-Holidays-No is (C) by Marcus Ramberg, (mramberg) 2004
+
+    Date-Holidays-No is released under the artistic license
+
+    The distribution is licensed under the Artistic License, as specified by
+    the Artistic file in the standard perl distribution
+    (http://www.perl.com/language/misc/Artistic.html).
+
