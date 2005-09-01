@@ -2,7 +2,7 @@ package Date::Holidays::NO;
 
 use vars qw($VERSION);
 
-$VERSION=0.1;
+$VERSION=0.2;
 
 use base qw(Date::Holidays::Abstract);
 use No::Dato qw(helligdag helligdager);
@@ -33,7 +33,7 @@ __END__
 
 =head1  NAME
 
-Date::Holidays::NO - A wrapper for No::Dato to comply with Date:Holidays
+Date::Holidays::NO - A wrapper for No::Dato to comply with Date::Holidays
 
 =head1 SYNOPSIS
 
@@ -41,14 +41,29 @@ use Date::Holidays;
 
 my $dh = Date::Holidays->new( countrycode => 'no' );
 
-$dh->is_holiday( year  => 2004, month => 12, day   => 25); 
-$dh->holidays( year => 2004 );
+$dh->is_holiday( 2004, 12,  25); 
+$dh->holidays( $year );
 
 =head1 DESCRIPTION
 
 This is just a wrapper around No::Dato to comply with the Date::Holidays 
 factory class. See Date::Holidays for usage information, and No::Dato for
 implementation details.
+
+=head1 METHODS
+
+=over 4
+
+=item holidays
+
+takes a year, and returns a hashref of all the holidays for that year. 
+
+=item is_holiday
+
+Takes year/month/date as parameters, and returns the name of the holiday
+if it's a holiday, or undef otherwise.
+
+=back
 
 =head1 BUGS
 
